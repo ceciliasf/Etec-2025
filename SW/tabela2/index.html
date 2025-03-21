@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TABELA 2</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption {
+            font-size:  22px;
+            font-weight: bold;
+            padding: 10px;
+            background-color: aliceblue;
+        }
+        thead {
+            background-color: aliceblue;
+            color: rgb(0, 0, 0);
+        }
+        img {
+        height: 100px;
+        width: 150px;
+      }
+
+      tbody > tr:nth-child(odd) {
+        background-color:rgb(255, 255, 255);
+      }
+
+      tbody > tr:nth-child(even) {
+        background-color:rgb(255, 255, 255);
+      }
+
+      td{
+      text-align: center;
+      }
+    
+     tr{
+       font-size: 25px;
+       font-weight: bold;
+       padding: 20px;
+       background-color: rgb(255, 255, 255);
+     }
+
+    </style>
+</head>
+<body>
+    <H1>EXERCITANDO TABELAS COM IMAGENS</H1>
+    <table>
+        <caption>COMIDAS FAVORITAS</caption>
+
+        <thead>
+            <tr>
+                <th>Grupos</th>
+                <th style="width:25 px;">Nomes</th>
+                <th colspan="3" style="width:30 px;">Escolhas</th>    
+            </tr>
+        </thead> 
+        <tbody>   
+            <tr>
+                <td rowspan="2">Mulheres</td>
+                <td>Maria</td>
+                <td><img src="imagens/Maria1.jfif" alt="Melancia"></td>
+                <td><img src="imagens/Maria2.jfif" alt="Pamonha"></td>
+                <td><img src="imagens/Maria3.jfif" alt="Tacos"></td>
+            </tr> 
+            <tr>
+                <th>Mariana</th>
+                <td><img src="imagens/Mariana1.webp" alt="Brigadeiro"></td>
+                <td><img src="imagens/Mariana2.jfif" alt="Sorvete"></td>
+                <td><img src="imagens/Mariana3.jfif" alt="Nutella"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Homens</td>
+                <td>Luiz</td>
+                <td><img src="imagens/Luiz1.jfif" alt="Coxinha"></td>
+                <td><img src="imagens/Luiz2.jfif" alt="Lasanha"></td>
+                <td><img src="imagens/Luiz3].jfif" alt="Costela"></td>
+            </tr>
+            <tr>
+                <td>Lucas</td>
+                <td><img src="imagens/Lucas1.jfif" alt="Pizza"></td>
+                <td><img src="imagens/Lucas2.jfif" alt="Churrasco"></td>
+                <td><img src="imagens/Lucas3.jfif" alt="Feijoada"></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+
+          <tr>
+            <th colspan="2">Total</th>
+            <td colspan="3">12 Opções</td>
+          </tr>
+          
+        </tfoot>
+  </table>
+  
+</body>
+</html>
