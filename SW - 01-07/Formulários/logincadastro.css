@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura e altura total */
+    margin: 0; /* Remove as margens padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento (padding) padrão de todos os elementos */
+}
+
+html, body {
+    height: 100%; /* Faz com que ocupem a altura total da janela do visualizador */
+    width: 100%; /* Faz com que ocupem toda a largura da janela do visualizador */
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.form-fundo {
+    width: 100%; /* Faz com que o container ocupe a largura total da tela */
+    height: 100%;  /* Faz com que o container ocupe a altura total da tela */
+    display: flex; /* Define o container como flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente dentro do container */
+    align-items: center; /* Centraliza os itens verticalmente dentro do container */
+}
+
+.form-login, .form-cadastro {
+    background-color: white;
+    padding: 20px; /* Adiciona um preenchimento de 40px em todos os lados */
+    border-radius: 10px; /* Arredonda levemente os cantos do formulário */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil com 15px de desfoque, preto 10% opaco */
+    width: 100%; /* Faz com que o formulário ocupe 100% da largura de seu pai */
+    max-width: 400px; /* Define uma largura máxima do formulário de até 400px */
+  }
+
+
+h1 {
+    text-align: center; /* Centraliza o texto dentro dos elementos h1 */
+    margin-bottom: 25px; /* Adiciona uma margem inferior de 25px abaixo dos elementos h1 */
+  }
+
+label {
+    font-weight: bold; /* negrito */
+    display: block; /* Faz com que os labels sejam elementos de bloco, ocupando largura total e empilhando verticalmente */
+    margin-top: 10px; /* Adiciona uma margem superior de 10px acima das labels */
+}
+
+input {
+    width: 100%;
+    padding: 12px; /* Adiciona um preenchimento interno de 10px dentro dos inputs */
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10px abaixo dos campos de input */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-1, .btn-2 {
+    width: 100%;
+    padding: 12px;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar o mouse sobre os botões */
+    transition: background-color 0.3s ease; /* Adiciona um efeito de transição para mudanças na cor de fundo em 0.3 segundos */
+    margin-top: 10px;
+}
+
+.btn-1 {
+    background-color: rgb(114, 172, 247); /* Cor de fundo do botão "btn_1" em tom de verde */
+    color: white;
+  }
+
+  .btn-1:hover {
+    background-color:  rgb(114, 172, 247); /* Escurece a cor de fundo de "btn_1" ao passar o mouse sobre ele */
+  }
+
+  .btn-2 {
+    background-color:  rgb(175, 207, 255); /* Define a cor de fundo de "btn_2" para um tom de azul */
+    color: white;
+  }
+
+  .btn-2:hover {
+    background-color:  rgb(175, 207, 255); /* Escurece o fundo de "btn_2" ao passar o mouse sobre ele */
+  }

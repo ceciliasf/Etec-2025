@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="logincadastro.css">
+</head>
+<body>
+  <div class="form-fundo">
+    <div class="form-cadastro">
+        <h1>Cadastro</h1>
+        <form id="cadastroForm" action="cadastro.php" method="post">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input id="telefone" type="tel" name="telefone" placeholder="Digite o número do telefone" required>
+
+            <label for="cpf">CPF:</label>
+            <input id="cpf" type="text" name="cpf" placeholder="00000000000" required>
+
+            <label for="senha">Senha:</label>
+            <input id="senha" type="password" name="senha" required>
+
+            <label for="confirmaSenha">Confirmar senha:</label>
+            <input id="confirmaSenha" type="password" name="confirmaSenha" required>
+
+            <button class="btn-1" type="submit">Cadastrar</button>
+
+            <button class="btn-2" type="button" onclick="window.location.href='login.html'">Fazer login</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+        // Remova event.preventDefault() daqui se você quiser que o formulário seja enviado
+        // SOMENTE SE AS VALIDAÇÕES ABAIXO PASSAREM.
+        // OU, se deixá-lo aqui, você precisará enviar o formulário programaticamente.
+        event.preventDefault(); // MANTENHA AQUI PARA CONTROLAR O FLUXO
+
+        const email = document.getElementById("email").value.trim();
+        const telefone = document.getElementById("telefone").value.trim();
+        const cpf = document.getElementById("cpf").value.trim();
+        const senha = document.getElementById("senha").value;
+        const confirmaSenha = document.getElementById("confirmaSenha").value; // Correção aqui
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const telefoneRegex = /^(\(?\d{2}\)?)\s?\d{4,5}-?\d{4}$/;
+        const cpfRegex = /^\d{11}$/;
+
+        if (!emailRegex.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        }
+
+        if (!telefoneRegex.test(telefone)) {
+            alert("Por favor, insira um número de telefone válido. Ex: (11) 91111-2222 ou 11911112222");
+            return;
+        }
+
+        if (!cpfRegex.test(cpf)) {
+            alert("O CPF deve conter exatamente 11 números, sem pontos ou traços.");
+            return;
+        }
+
+        if (senha !== confirmaSenha) {
+            alert("As senhas não coincidem. Verifique novamente.");
+            return;
+        }
+
+        // Se todas as validações passarem, envie o formulário programaticamente
+        // Isso simulará o comportamento padrão de envio do formulário.
+        event.target.submit(); // Esta linha irá enviar o formulário para cadastro.php
+    });
+    </script>
+</body>
+</html>
